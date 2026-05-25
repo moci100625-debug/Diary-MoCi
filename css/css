@@ -1,0 +1,524 @@
+/* ==================================================================
+   1. PENGATURAN UMUM & RESET DEFALUT
+==================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+}
+
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Class pembantu untuk menyembunyikan halaman */
+.hidden {
+    display: none !important;
+}
+
+/* Base style untuk semua section halaman utama */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 150px; /* Jarak agar konten tidak tertutup navbar fixed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+/* Judul halaman (Love Letter, CIA, dll) */
+.section-title {
+    color: #5cb3d4;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px #fff;
+    text-align: center;
+}
+
+
+/* ==================================================================
+   2. HALAMAN LOGIN
+==================================================================== */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.logo {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid #6bbfe0;
+    border-radius: 20px;
+    padding: 25px 30px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.input-pill {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 3px solid #6bbfe0;
+    border-radius: 30px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-pill .label {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.input-pill input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    flex: 1;
+    width: 100%;
+    color: #000;
+}
+
+.eye-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+    outline: none;
+    position: relative;
+    z-index: 10;
+    padding: 5px;
+}
+
+#masukBtn {
+    background-color: #ffffff;
+    border: 3px solid #6bbfe0;
+    border-radius: 25px;
+    padding: 5px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#masukBtn:active {
+    transform: scale(0.95);
+    background-color: #f0f8ff;
+}
+
+
+/* ==================================================================
+   3. GLOBAL NAVBAR (MENU ATAS)
+==================================================================== */
+.navbar {
+    background-color: #877bc9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-logo {
+    height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+    opacity: 0.7;
+}
+
+
+/* ==================================================================
+   4. HALAMAN HOME (WELCOME IN)
+==================================================================== */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.curved-text {
+    width: 500px;
+    height: 150px;
+    margin-bottom: -30px;
+}
+
+.center-logo {
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+}
+
+
+/* ==================================================================
+   5. HALAMAN LOVE LETTER & CIA CARDS
+==================================================================== */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 95%;
+    max-width: 900px;
+}
+
+/* Style Kartu Love Letter */
+.ll-card {
+    text-align: center;
+    width: 200px;
+}
+
+.img-frame {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.img-frame img {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+}
+
+.ll-card h3 {
+    color: #333;
+    font-size: 22px;
+}
+
+/* Style Kartu CIA (Congrats & Birthday) */
+.cia-card {
+    width: 220px;
+}
+
+.cia-purple-box {
+    background-color: #877bc9;
+    padding: 15px;
+    border-radius: 20px;
+    border: 4px solid white;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cia-img-placeholder {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.cia-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cia-purple-box p {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+/* ==================================================================
+   6. HALAMAN BIRTHDAY & CAKE OVERLAY
+==================================================================== */
+.bday-wrapper {
+    position: relative;
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.bday-full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cake-overlay {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.cake-text {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.2;
+    text-decoration: underline;
+    transition: transform 0.2s;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 5px 12px;
+    border-radius: 10px;
+}
+
+.cake-overlay:hover .cake-text {
+    transform: scale(1.1);
+}
+
+
+/* ==================================================================
+   7. HALAMAN UCAPAN BIRTHDAY (WISH) & CONGRATS (GAMBAR UTUH)
+==================================================================== */
+.wish-wrapper, .congrats-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.wish-full-img, .congrats-full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+
+/* ==================================================================
+   8. TOMBOL BACK GLOBAL (TETAP DIBAWAH MELAYANG)
+==================================================================== */
+.back-btn {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    background: linear-gradient(to right, #d348e3, #fc94ff) !important;
+    border: none !important;
+    color: white !important;
+    padding: 10px 35px !important;
+    border-radius: 30px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+    transition: transform 0.1s !important;
+}
+
+.back-btn:active {
+    transform: scale(0.95) !important;
+}
+
+
+/* ==================================================================
+   9. ANIMASI TRANSISI HALAMAN
+==================================================================== */
+.slide-out-right { transform: translateX(120vw); opacity: 0; }
+.slide-out-left { transform: translateX(-120vw); opacity: 0; }
+.fade-in { animation: fadeInAnim 0.8s ease-in-out forwards; }
+@keyframes fadeInAnim { from { opacity: 0; } to { opacity: 1; } }
+
+
+/* ==================================================================
+   10. TAMPILAN RESPONSIF HP (PORTRAIT / TEGAK)
+==================================================================== */
+@media (max-width: 768px) {
+    /* Navbar HP */
+    .navbar { 
+        flex-direction: column !important; 
+        padding: 15px 10px !important; 
+        gap: 15px !important; 
+    }
+    .nav-logo { 
+        height: 45px !important; 
+    }
+    .nav-links { 
+        display: flex !important; 
+        flex-direction: row !important; 
+        flex-wrap: nowrap !important; 
+        justify-content: space-around !important; 
+        align-items: center !important; 
+        width: 100% !important; 
+        padding: 0 !important; 
+        gap: 5px !important; 
+    }
+    .nav-links li { 
+        list-style: none !important; 
+    }
+    .nav-links li a { 
+        font-size: 11px !important; 
+        text-decoration-thickness: 2px !important; 
+        white-space: nowrap !important; 
+    }
+        .section-container {
+        padding-top: 150px !important; 
+    }
+    
+    .section-title { 
+        font-size: 32px !important; 
+        margin-bottom: 30px !important;
+    }
+    /* Home HP */
+    .curved-text { 
+        width: 100% !important; 
+        max-width: 320px !important; 
+        height: auto !important; 
+        margin-bottom: 0px !important; 
+    }
+    .center-logo { 
+        width: 85% !important; 
+        margin-top: -15px !important; 
+    }
+    .section-title { 
+        font-size: 32px !important; 
+    }
+
+    /* Container Kartu (Dipaksa Berjejer Samping di HP) */
+    .card-container { 
+        display: flex !important;
+        flex-direction: row !important; 
+        flex-wrap: nowrap !important;   
+        justify-content: center !important;
+        gap: 12px !important; 
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+    
+    /* Ukuran Kartu Di HP */
+    .ll-card { width: 31% !important; }
+    .ll-card h3 { font-size: 13px !important; }
+    
+    .cia-card { width: 46% !important; }
+    .cia-purple-box { padding: 8px !important; border-width: 3px !important; border-radius: 15px !important; }
+    .cia-img-placeholder { height: 105px !important; }
+    .cia-purple-box p { font-size: 13px !important; margin-top: 5px !important; }
+
+    /* Birthday Page HP */
+    .bday-wrapper { margin-top: 40px !important; }
+    .cake-text { font-size: 12px !important; bottom: 8% !important; padding: 4px 8px !important; }
+    
+    /* Ucapan & Congrats HP */
+    .wish-wrapper, .congrats-wrapper { width: 92% !important; margin-top: 20px !important; }
+
+    /* Tombol Back di HP Portrait */
+    .back-btn { 
+        bottom: 20px !important; 
+        right: 20px !important; 
+        font-size: 14px !important; 
+        padding: 8px 22px !important; 
+    }
+}
+
+
+/* ==================================================================
+   11. TAMPILAN RESPONSIF HP (LANDSCAPE / MIRING)
+==================================================================== */
+@media (max-height: 600px) and (orientation: landscape) {
+    .navbar {
+        flex-direction: row !important; 
+        padding: 5px 20px !important;
+    }
+    .nav-logo { height: 35px !important; }
+    .nav-links { justify-content: flex-end !important; gap: 20px !important; }
+    .nav-links li a { font-size: 12px !important; }
+    
+    /* Mengizinkan gulir halaman jika layar landscape terlalu pendek */
+    .section-container {
+        padding-top: 70px !important;
+        min-height: 125vh !important; 
+    }
+    
+    /* Paskan proporsi semua pembungkus gambar agar pas di layar pendek */
+    .bday-wrapper, .wish-wrapper, .congrats-wrapper { 
+        width: 85% !important; 
+        margin-top: 15px !important; 
+        margin-bottom: 40px !important;
+    }
+    
+    .cake-overlay { bottom: 10% !important; }
+    .cake-text { font-size: 14px !important; }
+
+    /* LOCK KUNCI TOMBOL BACK AGAR TETAP MELAYANG DI BAWAH SAAT LANDSCAPE */
+    .back-btn { 
+        position: fixed !important; 
+        bottom: 15px !important; 
+        right: 20px !important;  
+        font-size: 13px !important; 
+        padding: 6px 20px !important; 
+        z-index: 999999 !important; 
+        transform: translateZ(0) !important; /* Solusi bypass bug rendering landscape browser HP */
+    }
+}

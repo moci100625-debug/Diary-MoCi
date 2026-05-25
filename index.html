@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary MoCi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main-wrapper" id="loginSection">
+        <img src="img/logo diary moci.png" alt="Logo Diary MoCi" class="logo">
+        <div class="login-box">
+            <h2>LOGIN</h2>
+            <div class="input-pill">
+                <span class="label">Username :</span>
+                <input type="text" id="username" value="moci45">
+            </div>
+            <div class="input-pill">
+                <span class="label">Password :</span>
+                <input type="password" id="password" placeholder="Ketik di sini...">
+                <button type="button" id="togglePassword" class="eye-btn">👁️</button>
+            </div>
+            <button id="masukBtn"><u>Masuk</u></button>
+        </div>
+    </div>
+
+    <nav id="globalNavbar" class="navbar hidden">
+        <img src="img/logo diary moci.png" alt="Logo" class="nav-logo">
+        <ul class="nav-links">
+            <li><a href="#" id="homeLink">HOME</a></li>
+            <li><a href="#" id="loveLetterLink">LOVE LETTER</a></li>
+            <li><a href="#">DIARY & GALLERY</a></li>
+            <li><a href="#" id="logoutBtn">LOGOUT</a></li>
+        </ul>
+    </nav>
+
+    <div id="homeSection" class="section-container hidden">
+        <main class="main-content">
+            <div class="welcome-container">
+                <svg viewBox="0 0 500 150" class="curved-text">
+                    <path id="curve" d="M 50 130 Q 250 -10 450 130" fill="transparent" />
+                    <text fill="#5cb3d4" font-size="55" font-weight="bold" font-family="'Comic Sans MS', cursive">
+                        <textPath href="#curve" startOffset="50%" text-anchor="middle">WELCOME IN</textPath>
+                    </text>
+                </svg>
+                <img src="img/logo diary moci.png" alt="Diary MoCi" class="center-logo">
+            </div>
+        </main>
+    </div>
+
+    <div id="loveLetterSection" class="section-container hidden">
+        <h2 class="section-title">LOVE LETTER</h2>
+        <div class="card-container">
+            <div class="ll-card">
+                <div class="img-frame"><img src="img/momo.jpg"></div>
+                <h3>MoMo</h3>
+            </div>
+            <div class="ll-card">
+                <div class="img-frame"><img src="img/anniv.jpg"></div>
+                <h3>US</h3>
+            </div>
+            <div class="ll-card" id="ciaCardBtn" style="cursor: pointer;">
+                <div class="img-frame"><img src="img/cia.jpg"></div>
+                <h3>CIA</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="ciaSection" class="section-container hidden">
+        <h2 class="section-title">CIA</h2>
+        <div class="card-container">
+            <div class="cia-card" id="btnGoToCongrats" style="cursor: pointer;">
+                <div class="cia-purple-box">
+                    <div class="cia-img-placeholder"><img src="img/congrats.jpg"></div>
+                    <p>CONGRATS</p>
+                </div>
+            </div>
+            <div class="cia-card" id="btnGoToBirthday" style="cursor: pointer;">
+                <div class="cia-purple-box">
+                    <div class="cia-img-placeholder"><img src="img/hbd.jpg"></div>
+                    <p>BIRTHDAY</p>
+                </div>
+            </div>
+        </div>
+    </div>
+                      <div id="birthdaySection" class="section-container hidden">
+    <div class="bday-wrapper">
+        <img src="img/dekor ultah.jpg" alt="Birthday Decoration" class="bday-full-img">
+        
+        <div class="cake-overlay" id="cakeClickBtn">
+            <p class="cake-text">Klik Kue<br>ini</p>
+        </div>
+    </div>
+    
+    <button id="btnBackToCia" class="back-btn">Back ➔</button>
+</div>
+
+    </div>
+    <div id="wishSection" class="section-container hidden">
+        
+        <div class="wish-wrapper">
+            <img src="img/beruang ultah.jpg" alt="Ucapan Ulang Tahun" class="wish-full-img">
+        </div>
+
+        <button id="btnBackToBday" class="back-btn">Back ➔</button>
+
+    </div>
+
+
+    <div id="congratsSection" class="section-container hidden">
+        
+        <div class="congrats-wrapper">
+            <img src="img/happy sempro.jpg" alt="Happy Graduation" class="congrats-full-img">
+        </div>
+
+        <button id="btnBackFromCongrats" class="back-btn">Back ➔</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

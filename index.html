@@ -52,7 +52,7 @@
     <div id="loveLetterSection" class="section-container hidden">
         <h2 class="section-title">LOVE LETTER</h2>
         <div class="card-container">
-            <div class="ll-card">
+            <div class="ll-card" id="momoCardBtn" style="cursor: pointer;">
                 <div class="img-frame"><img src="img/momo.jpg"></div>
                 <h3>MoMo</h3>
             </div>
@@ -66,6 +66,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <div id="ciaSection" class="section-container hidden">
         <h2 class="section-title">CIA</h2>
@@ -83,6 +84,8 @@
                 </div>
             </div>
         </div>
+        <button id="btnBackFromMomo" class="back-btn">Back ➔</button>
+
     </div>
                       <div id="birthdaySection" class="section-container hidden">
     <div class="bday-wrapper">
@@ -118,6 +121,42 @@
 
     </div>
 
+<div id="momoSection" class="section-container hidden">
+        
+        <h2 class="section-title">MOMO</h2>
+        
+        <div class="card-container">
+           <div class="cia-card" id="btnGoToMomoBirthday" style="cursor: pointer;">
+                <div class="cia-purple-box">
+                    <div class="cia-img-placeholder"><img src="img/hbd.jpg" alt="Birthday"></div>
+                    <p>BIRTHDAY</p>
+                </div>
+            </div>
+            
+            <div class="cia-card" id="btnGoToCongrats" style="cursor: pointer;">
+                <div class="cia-purple-box">
+                    <div class="cia-img-placeholder"><img src="img/congrats.jpg" alt="CONGRATS"></div>
+                    <p>CONGRATS</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="btnBackFromMomo" class="back-btn">Back ➔</button>
+
+    </div>
+
+   <div id="momoBirthdaySection" class="section-container hidden">
+        
+        <div class="gallery-wrapper">
+            <img src="img/momo bday pg 1.jpg" id="momoGalleryImg" alt="MoMo Birthday" class="gallery-fit-img">
+        </div>
+
+        <button id="btnNextMomo" class="back-btn">Next ➔</button>
+        <button id="btnBackFromMomoGallery" class="back-btn hidden">Back ➔</button>
+
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+

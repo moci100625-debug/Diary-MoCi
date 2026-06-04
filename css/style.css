@@ -391,6 +391,23 @@ body {
 .fade-in { animation: fadeInAnim 0.8s ease-in-out forwards; }
 @keyframes fadeInAnim { from { opacity: 0; } to { opacity: 1; } }
 
+/* ==================================================================
+   STYLE KHUSUS GALERI MOMO (FULLSCREEN & FIT LAYAR)
+==================================================================== */
+.gallery-wrapper {
+    width: 100vw; /* Mengambil lebar layar penuh */
+    height: calc(100vh - 120px); /* Mengambil seluruh sisa tinggi layar di bawah navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.gallery-fit-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajaib: Memaksa gambar fit (pas) di layar tanpa memotong teks */
+}
 
 /* ==================================================================
    10. TAMPILAN RESPONSIF HP (PORTRAIT / TEGAK)
@@ -482,6 +499,11 @@ body {
     }
 }
 
+    /* Penyesuaian ukuran galeri untuk layar HP (Portrait) */
+    .gallery-wrapper {
+        height: calc(100vh - 200px); /* Karena navbar HP lebih tebal, tinggi layar dikurangi lebih banyak */
+        padding: 0 5px;
+    }
 
 /* ==================================================================
    11. TAMPILAN RESPONSIF HP (LANDSCAPE / MIRING)
@@ -522,3 +544,10 @@ body {
         transform: translateZ(0) !important; /* Solusi bypass bug rendering landscape browser HP */
     }
 }
+    /* Penyesuaian ukuran galeri untuk layar HP Miring (Landscape) */
+    .gallery-wrapper {
+        height: calc(100vh - 100px); 
+        width: 100%;
+        margin-top: -10px;
+    }
+
